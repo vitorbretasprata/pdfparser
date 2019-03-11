@@ -460,6 +460,7 @@ cdef class Line:
             double r,g,b
         
         w=self.line.getWords()
+        print w.getText()
         while w:
             wlen=w.getLength()
             assert wlen>0
@@ -482,7 +483,7 @@ cdef class Line:
                 self._fonts.append(last_font)
             #and then text as UTF-8 bytes
             s=w.getText()
-            print s.getCString(), w.getLength(), len(s.getCString())
+            #print s.getCString(), w.getLength(), len(s.getCString())
             words.append(s.getCString().decode('UTF-8')) # decoded to python unicode string
             del s
             # must have same ammount of bboxes and characters in word
