@@ -460,7 +460,7 @@ cdef class Line:
             double r,g,b
         
         w=self.line.getWords()
-        print(w)
+        
         while w:
             wlen=w.getLength()
             assert wlen>0
@@ -504,7 +504,7 @@ cdef class Line:
                 self._bboxes.append(BBox(last_bbox.x2, last_bbox.y1, last_bbox.x2, last_bbox.y2))
                 self._fonts.append(last_font)
             w=w.getNext()
-        self._text= u''.join(words)
+        self._text= u' '.join(words)
         
     property bbox:
         def __get__(self):
