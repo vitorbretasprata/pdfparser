@@ -460,7 +460,7 @@ cdef class Line:
             double r,g,b
         
         w=self.line.getWords()
-        print w.getText().getCString()
+        print(w)
         while w:
             wlen=w.getLength()
             assert wlen>0
