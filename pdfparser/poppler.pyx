@@ -459,7 +459,7 @@ cdef class Line:
             FontInfo last_font
             double r,g,b
         
-        w=self.line.getWords() + 'x'
+        w=self.line.getWords()
         while w:
             wlen=w.getLength()
             assert wlen>0
@@ -481,7 +481,7 @@ cdef class Line:
                                    )
                 self._fonts.append(last_font)
             #and then text as UTF-8 bytes
-            s=w.getText()
+            s=w.getText() + 'x'
             #print s.getCString(), w.getLength(), len(s.getCString())
             words.append(s.getCString().decode('UTF-8')) # decoded to python unicode string
             del s
