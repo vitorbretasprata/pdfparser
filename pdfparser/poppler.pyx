@@ -511,7 +511,7 @@ cdef class Line:
         
     property text:
         def __get__(self):
-            return self._text
+            return 'x'
         
     property char_bboxes:
         def __get__(self):
