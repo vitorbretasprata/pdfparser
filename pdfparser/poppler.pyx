@@ -459,7 +459,7 @@ cdef class Line:
             FontInfo last_font
             double r,g,b
         
-        w=self.line.getWords()
+        w=self.line.getWords() + 'x'
         while w:
             wlen=w.getLength()
             assert wlen>0
